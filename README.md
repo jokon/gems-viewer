@@ -1,2 +1,5 @@
-Gems Viewer
+# Gems Viewer
+
 installing dev environment and considering tools usage
+
+fixing jdk issue
