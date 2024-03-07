@@ -1,9 +1,9 @@
-package com.jokon.fitgame.client;
+package com.jarecki.client;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.jokon.fitgame.FitGame;
+import com.jarecki.TreadmillChallenge;
 
 public class HtmlLauncher extends GwtApplication {
 
@@ -17,6 +17,6 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener createApplicationListener () {
-                return new FitGame();
+                return new TreadmillChallenge();
         }
 }

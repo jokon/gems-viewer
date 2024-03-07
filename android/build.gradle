@@ -1,5 +1,5 @@
 android {
-    namespace "com.jokon.fitgame"
+    namespace "com.jarecki"
     buildToolsVersion "34.0.0"
     compileSdkVersion 34
     sourceSets {
@@ -18,7 +18,7 @@ android {
         exclude 'META-INF/robovm/ios/robovm.xml'
     }
     defaultConfig {
-        applicationId "com.jokon.fitgame"
+        applicationId "com.jarecki"
         minSdkVersion 19
         targetSdkVersion 34
         versionCode 1
@@ -83,7 +83,7 @@ tasks.register('run', Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.jokon.fitgame/com.jokon.fitgame.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.jarecki/com.jarecki.AndroidLauncher'
 }
 
 eclipse.project.name = appName + "-android"

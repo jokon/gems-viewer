@@ -4,8 +4,8 @@ gwt {
     minHeapSize="1G"
 
     src = files(file("src/")) // Needs to be in front of "modules" below.
-    modules 'com.jokon.fitgame.GdxDefinition'
-    devModules 'com.jokon.fitgame.GdxDefinitionSuperdev'
+    modules 'com.jarecki.GdxDefinition'
+    devModules 'com.jarecki.GdxDefinitionSuperdev'
     project.webAppDirName = 'webapp'
 
     compiler {

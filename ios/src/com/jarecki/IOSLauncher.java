@@ -1,17 +1,17 @@
-package com.jokon.fitgame;
+package com.jarecki;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;
 
 import com.badlogic.gdx.backends.iosrobovm.IOSApplication;
 import com.badlogic.gdx.backends.iosrobovm.IOSApplicationConfiguration;
-import com.jokon.fitgame.FitGame;
+import com.jarecki.TreadmillChallenge;
 
 public class IOSLauncher extends IOSApplication.Delegate {
     @Override
     protected IOSApplication createApplication() {
         IOSApplicationConfiguration config = new IOSApplicationConfiguration();
-        return new IOSApplication(new FitGame(), config);
+        return new IOSApplication(new TreadmillChallenge(), config);
     }
 
     public static void main(String[] argv) {
