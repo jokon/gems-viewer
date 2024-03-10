@@ -1,6 +1,7 @@
 package com.jarecki;
 
 import android.Manifest;
+import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothManager;
 import android.content.Intent;
@@ -12,7 +13,7 @@ import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.jarecki.TreadmillChallenge;
 
 public class AndroidLauncher extends AndroidApplication {
-	private static final int REQUEST_ENABLE_BT = 0;
+	private static final int REQUEST_ENABLE_BT = 101; // magic number
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,18 @@ public class AndroidLauncher extends AndroidApplication {
 					return;
 				}
 				startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+			}
+		}
+
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//		super.onActivityResult(requestCode, resultCode, data);
+		
+		if (requestCode == REQUEST_ENABLE_BT) {
+			if (resultCode == Activity.RESULT_OK) {
+
 			}
 		}
 
