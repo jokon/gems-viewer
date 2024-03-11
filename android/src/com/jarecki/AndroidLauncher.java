@@ -3,6 +3,7 @@ package com.jarecki;
 import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -11,6 +12,8 @@ import android.os.Bundle;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.jarecki.TreadmillChallenge;
+
+import java.util.Set;
 
 public class AndroidLauncher extends AndroidApplication {
 	private static final int REQUEST_ENABLE_BT = 101; // magic number
@@ -42,6 +45,11 @@ public class AndroidLauncher extends AndroidApplication {
 					return;
 				}
 				startActivityForResult(enableBtIntent, REQUEST_ENABLE_BT);
+			}
+			Set<BluetoothDevice> bondedDevices = bluetoothAdapter.getBondedDevices();
+			if (bondedDevices.size() > 0) {
+				BluetoothDevice bluetoothDevice = bondedDevices.iterator().next();
+				bluetoothDevice.
 			}
 		}
 
